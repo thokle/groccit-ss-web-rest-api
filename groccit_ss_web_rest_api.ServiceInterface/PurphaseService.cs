@@ -15,5 +15,10 @@ namespace groccit_ss_web_rest_api.ServiceInterface
 
             return new PurphaseRespons { Resultat = purphase.testPurchase};
         }
+
+        public object Get(PurphaseList purphaseList)
+        {
+            return new List<PurphaseRespons>();
+        }
     }
 }

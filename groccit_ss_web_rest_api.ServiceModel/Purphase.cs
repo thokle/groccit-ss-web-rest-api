@@ -14,6 +14,11 @@ namespace groccit_ss_web_rest_api.ServiceModel
        public    TestPurchaseIntention testPurchase { get; set;}
     }
     
+    [Route("/purphase/{userid}", "GET")]
+    public class PurphaseList: IReturn<List<PurphaseRespons>>
+    {
+
+    }
 
     public class PurphaseRespons
     {
