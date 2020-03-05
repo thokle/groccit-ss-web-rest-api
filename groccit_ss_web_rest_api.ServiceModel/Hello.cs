@@ -16,4 +16,5 @@ namespace groccit_ss_web_rest_api.ServiceModel
     {
         public string Result { get; set; }
     }
+   
 }

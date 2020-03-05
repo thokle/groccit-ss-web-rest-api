@@ -1,6 +1,7 @@
 ﻿using Funq;
 using ServiceStack;
 using groccit_ss_web_rest_api.ServiceInterface;
+using ServiceStack.Api.Swagger;
 
 namespace groccit_ss_web_rest_api
 {
@@ -11,7 +12,7 @@ namespace groccit_ss_web_rest_api
         /// Base constructor requires a Name and Assembly where web service implementation is located
         /// </summary>
         public AppHost()
-            : base("groccit_ss_web_rest_api", typeof(MyServices).Assembly) { }
+            : base("groccit_ss_web_rest_api", typeof(MyServices).Assembly){ }
 
         /// <summary>
         /// Application specific configuration
@@ -21,9 +22,14 @@ namespace groccit_ss_web_rest_api
         {
             //Config examples
             //this.Plugins.Add(new PostmanFeature());
-            var cors = new CorsFeature();
+ 
+            Plugins.Add(new SwaggerFeature());
            
-            this.Plugins.Add(cors);
+
+            Plugins.Add(new CorsFeature(
+    allowOriginWhitelist: new[] { "http://localhost", "http://localhost:5000", "http://run.plnkr.co" },
+    allowCredentials: true,
+    allowedHeaders: "Content-Type, Allow, Authorization, X-Args"));
         }
     }
 }
