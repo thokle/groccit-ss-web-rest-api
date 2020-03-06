@@ -27,7 +27,7 @@ namespace groccit_ss_web_rest_api
            
 
             Plugins.Add(new CorsFeature(
-    allowOriginWhitelist: new[] { "http://localhost", "http://localhost:5000", "http://run.plnkr.co" , "http://localhost:3000" },
+    allowOriginWhitelist: new[] { "http://localhost", "http://localhost:5000", "http://run.plnkr.co" , "http://localhost:3000", "https://www.groccit-beta.com"},
     allowCredentials: true,
     allowedHeaders: "Content-Type, Allow, Authorization, X-Args"));
         }
