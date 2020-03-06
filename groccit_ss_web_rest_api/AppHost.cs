@@ -22,7 +22,7 @@ namespace groccit_ss_web_rest_api
         {
             //Config examples
             //this.Plugins.Add(new PostmanFeature());
- 
+           // container.Register(i => new data_soruce_mil.services.TestPurhaseIntentionService()).ReusedWithin(ReuseScope.Default);
             Plugins.Add(new SwaggerFeature());
            
 
