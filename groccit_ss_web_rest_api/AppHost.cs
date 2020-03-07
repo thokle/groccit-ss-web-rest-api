@@ -24,8 +24,7 @@ namespace groccit_ss_web_rest_api
             //this.Plugins.Add(new PostmanFeature());
            // container.Register(i => new data_soruce_mil.services.TestPurhaseIntentionService()).ReusedWithin(ReuseScope.Default);
             Plugins.Add(new SwaggerFeature());
-           
-
+            container.Register<data_soruce_mil.services.ITestPurhaseIntentionService>(i => new data_soruce_mil.services.TestPurhaseIntentionService()).ReusedWithin(ReuseScope.Request);
             Plugins.Add(new CorsFeature(
     allowOriginWhitelist: new[] { "http://localhost", "http://localhost:5000", "http://run.plnkr.co" , "http://localhost:3000", "https://www.groccit-beta.com"},
     allowCredentials: true,

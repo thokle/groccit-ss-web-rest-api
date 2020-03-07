@@ -10,8 +10,9 @@ namespace groccit_ss_web_rest_api.ServiceInterface
 {
     public class PurphaseService : Service
     {
-        data_soruce_mil.services.TestPurhaseIntentionService testPurhase = new data_soruce_mil.services.TestPurhaseIntentionService();
+        public data_soruce_mil.services.ITestPurhaseIntentionService testPurhase { get; set; }
 
+       
         
         public object Any(Purphase purphase)
         {
