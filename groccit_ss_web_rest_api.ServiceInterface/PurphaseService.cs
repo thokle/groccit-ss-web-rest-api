@@ -17,7 +17,7 @@ namespace groccit_ss_web_rest_api.ServiceInterface
         
         public object Any(Purphase purphase)
         {
-            var testpurphaoe = (data_soruce_mil.models.TestPurchaseIntention)purphase.testPurchase;eld 
+            var testpurphaoe = (data_soruce_mil.models.TestPurchaseIntention)purphase.testPurchase;
 
           var res =   testPurhase.CreateTestPurchaseIntention(testpurphaoe);
            
