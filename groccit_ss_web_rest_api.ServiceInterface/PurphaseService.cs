@@ -1,4 +1,5 @@
-﻿using groccit_ss_web_rest_api.ServiceModel;
+﻿using data_soruce_mil.models;
+using groccit_ss_web_rest_api.ServiceModel;
 using ServiceStack;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace groccit_ss_web_rest_api.ServiceInterface
         
         public object Any(Purphase purphase)
         {
-            var testpurphaoe = (data_soruce_mil.models.TestPurchaseIntention)purphase.testPurchase;
+            var testpurphaoe = (data_soruce_mil.models.TestPurchaseIntention)purphase.testPurchase;eld 
 
           var res =   testPurhase.CreateTestPurchaseIntention(testpurphaoe);
            
@@ -24,9 +25,10 @@ namespace groccit_ss_web_rest_api.ServiceInterface
             return new PurphaseRespons { Resultat = purphase.testPurchase};
         }
 
-        public object Get(PurphaseList purphaseList)
+        public object Get(PurphaseList purphase)
         {
-            return new List<PurphaseRespons>();
+            
+            return new PurphaseRespons { PurchaseIntentions = testPurhase.GetTestPurchaseIntentions() };
         }
     }
 }
