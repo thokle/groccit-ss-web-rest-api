@@ -91,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculatorService.cs" />
     <Compile Include="PurphaseService.cs" />
+    <Compile Include="GroccitUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

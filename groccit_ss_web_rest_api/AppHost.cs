@@ -25,6 +25,7 @@ namespace groccit_ss_web_rest_api
            // container.Register(i => new data_soruce_mil.services.TestPurhaseIntentionService()).ReusedWithin(ReuseScope.Default);
             Plugins.Add(new SwaggerFeature());
             container.Register<data_soruce_mil.services.ITestPurhaseIntentionService>(i => new data_soruce_mil.services.TestPurhaseIntentionService()).ReusedWithin(ReuseScope.Request);
+            container.Register<data_soruce_mil.services.IUserService>(i => new data_soruce_mil.services.UserService()).ReusedWithin(ReuseScope.Request);
             Plugins.Add(new CorsFeature(
                 allowedOrigins: "*",
   
